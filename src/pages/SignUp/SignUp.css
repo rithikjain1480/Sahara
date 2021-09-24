@@ -1,0 +1,11 @@
+#root .signUp {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#root .signUp i {
+    /* margin-left: 5px; */
+}

@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Regular.ttf') format('truetype');
+}
+
+body #root {
+    font-family: 'Raleway';
+    padding-bottom: 30px;
+}
+
+.hidden #root {
+    display: none;
+}
+
+#root .pageHeader {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+#root .pageHeader i {
+    color: #1ac68e;
+}

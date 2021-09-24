@@ -1,0 +1,17 @@
+.queryView {
+    width: 65vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-left: 20vw;
+    padding-left: 5vw;
+    border-left: 1px solid lightgray;
+}
+
+.queryView .bookWrapper {
+    margin-bottom: 30px;
+    margin-left: 7vw;
+    margin-right: 7vw;
+}

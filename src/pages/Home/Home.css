@@ -1,0 +1,5 @@
+.groupView, .memberView, .memberProfile {
+    display: block;
+    width: 90vw;
+    margin: 0 auto;
+}

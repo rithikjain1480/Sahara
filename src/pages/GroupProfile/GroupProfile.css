@@ -1,0 +1,63 @@
+.groupProfile {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+#root .groupProfileImage {
+    border-radius: 50%;
+    cursor: pointer;
+    width: 10vw;
+    height: 10vw;
+    margin-bottom: 10px;
+}
+
+#root .groupProfileWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#root .groupProfileCategories {
+    display: inline-block;
+    min-width: 25vw;
+    margin-top: 10px;
+}
+
+#root .groupCategories {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+#root .groupCategories p {
+    margin-bottom: 0px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#root .groupProfileHeader h1 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#root .groupProfileHeader p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#root .groupProfileWrapper h2 {
+    margin-bottom: 0px;
+}
+
+#root .groupProfileCategories .addCategory .textField {
+    display: inline-block;
+    min-width: 25vw;
+}
+
+#root .groupProfileCategories .addCategory .textField .input {
+    width: 100%
+}

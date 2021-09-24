@@ -1,0 +1,28 @@
+#root .landing {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+#root .landingContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vw;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#root .landingContent div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#root .landingImage {
+    width: 40vw;
+    height: auto;
+}

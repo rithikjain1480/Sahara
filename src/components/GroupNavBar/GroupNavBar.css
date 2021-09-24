@@ -1,0 +1,21 @@
+#root .groupNavBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    margin: 20px auto;
+}
+
+#root .groupNavBar form #searchBar {
+    width: 50vw;
+    font-size: 16px;
+}
+
+#root .groupNavBar .navBarDropDown i {
+    font-size: 2em;
+}
+
+#root .groupNavBar .navBarLogo {
+    cursor: pointer;
+}

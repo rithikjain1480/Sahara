@@ -1,0 +1,12 @@
+#root .landingButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 70vw;
+    margin: 20px auto;
+}
+
+#root .landingButtons .navBarLogo {
+    cursor: pointer;
+}

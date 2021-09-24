@@ -1,0 +1,16 @@
+#root .dropDown .dropDownInner .title {
+    font-size: 18px;
+}
+
+#root .dropDownList {
+    /* list-style-type: none; */
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+}

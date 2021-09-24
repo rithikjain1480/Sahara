@@ -1,0 +1,21 @@
+#root .signIn {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#root .signInInner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#root .signInImage {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40vw;
+    height: 50vh;
+}

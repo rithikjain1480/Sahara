@@ -1,0 +1,83 @@
+#root .createListing {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+#root .createListingWrapper {
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50px;
+    z-index: -1;
+    background-position: bottom;
+}
+
+#root .createListing .createListingContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 65vw;
+    margin: auto;
+    /* position: relative; */
+}
+
+#root .createListing .createListingForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: lightgray solid 1px;
+    border-radius: 25px;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-shadow: 5px 5px 8px gray;
+}
+
+#root .createListing .createListingForm .createListingFormContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#root .createListing .createListingForm .createListingFormContent .createListingColumn1, #root .createListing .createListingForm .createListingFormContent .createListingColumn2 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#root .createListingChooseFile {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#root .createListingChooseFile p {
+    cursor: default;
+}
+
+#root .createListingDropDown {
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+#root .createListingRadioButtons {
+    margin-bottom: 15px;
+}
+
+#root .createListingRadioButtons .field {
+    margin-bottom: 5px;
+}
+
+#root .createListing .createListingSubmitButton {
+    margin-top: 20px;
+}
+
+/* #root .createListing .createListingContentAndHeader .createListingImage {
+    position: fixed;
+    top: 15vh;
+    left: 15vw;
+    z-index: -1
+} */

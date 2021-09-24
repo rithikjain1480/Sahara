@@ -1,0 +1,13 @@
+.topPicks {
+    margin: auto;
+    width: 50vw;
+}
+
+.topPicksContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 16px;
+    /* change wrap to scrollable potentially */
+}

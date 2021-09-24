@@ -1,0 +1,8 @@
+#root .groupViewContent {
+    display: flex;
+    width: 90vw;
+}
+
+#root .groupBooks {
+    width: 65vw;
+}

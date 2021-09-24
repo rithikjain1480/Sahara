@@ -1,0 +1,63 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  
+  	function isLoggedIn(){
+    	return request.auth.uid != null;
+    }
+    
+    function isUpdating(fieldName){
+    	return (!(fieldName in resource.data) && fieldName in request.resource.data) || resource.data[fieldName] != request.resource.data[fieldName];
+    }
+    
+    match /Members/{member} {
+      allow write: if isLoggedIn() && (resource.id == request.auth.token.email || request.resource.id == request.auth.token.email);
+      allow update: if isLoggedIn() && !(exists(/databases/$(database)/documents/Members/$(request.auth.token.email))) && !(isUpdating('dob') || isUpdating('email') || isUpdating('name') || isUpdating('pimage') || isUpdating('type'));
+      allow update: if isLoggedIn() && exists(/databases/$(database)/documents/Members/$(request.auth.token.email)) && !(isUpdating('dob') || isUpdating('email') || isUpdating('groupcodes') || isUpdating('name') || isUpdating('pimage') || isUpdating('type'));
+    }
+  
+  	match /Groups/{group} {
+    	allow create: if isLoggedIn();
+      allow write: if isLoggedIn() && (('email' in request.resource.data && request.resource.data.email == request.auth.token.email) || resource.data['email'] == request.auth.token.email);
+      allow update: if isLoggedIn() && (request.auth.token.email in request.resource.data.members || request.auth.token.email in resource.data.members) && !(isUpdating('categories') || isUpdating('members') || isUpdating('email') || isUpdating('enabled') || isUpdating('name') || isUpdating('pimage') || isUpdating('type'));
+      allow update: if isLoggedIn() && isUpdating('members');
+    }
+    
+    match /Groups/{group}/Listings/{listing} {
+      allow write: if isLoggedIn() && get(/databases/$(database)/documents/Groups/$(group)).data.email == request.auth.token.email;
+      allow write: if isLoggedIn() && ((resource.data.keys().hasAll(['seller']) && resource.data.seller == request.auth.token.email) || (request.resource.data.keys().hasAll(['seller']) && request.resource.data.seller == request.auth.token.email));
+      allow update: if isLoggedIn() && exists(/databases/$(database)/documents/Members/$(request.auth.token.email)) && group in get(/databases/$(database)/documents/Members/$(request.auth.token.email)).data.groupcodes && !(isUpdating('seller') || isUpdating('author') || isUpdating('categories') || isUpdating('condition') || isUpdating('description') || isUpdating('group') || isUpdating('isbn') || isUpdating('name') || isUpdating('price') || isUpdating('pimage'));
+    }
+    
+    match /MailingList/Emails {
+    	allow read, write: if isLoggedIn();
+    }
+    
+    match /Dev/{document=**} {
+    	allow read: if true;
+      allow write: if false;
+    }
+    
+    match /Version/Version {
+    	allow read: if true;
+      allow write: if false;
+    }
+    
+    match /TakenGroupCodes/GroupCodes {
+    	allow read: if true;
+      allow write: if isLoggedIn();
+    }
+    
+    match /Groups/SAHARA {
+    	allow read: if true;
+    }
+    
+    match /Groups/SAHARA/Listings/{listing} {
+    	allow read: if true;
+    }
+  
+    match /{document=**} {
+      allow read: if isLoggedIn();
+    }
+  }
+}

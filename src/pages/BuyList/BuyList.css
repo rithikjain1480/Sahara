@@ -1,0 +1,22 @@
+.buyList {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.buyList table {
+    text-align: center;
+}
+
+.buyList td, .buyList th {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.buyList td img {
+    height: 25px;
+    width: 25px;
+    /* margin-left: 10px; */
+    cursor: pointer;
+}

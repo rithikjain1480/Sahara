@@ -1,0 +1,18 @@
+#root .textField {
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+#root .textField input {
+    font-size: 16px;
+    /* margin-top: 5px; */
+}
+
+#root .textField .label {
+    font-size: 16px;
+}
+
+#root .textField #date {
+    padding-top: 7px;
+    padding-bottom: 10px;
+}
